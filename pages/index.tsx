@@ -3,10 +3,13 @@ import Image from 'next/image'
 import Header from '../components/Header'
 import Animation from '../components/Animation'
 import Divider from '../components/Divider'
+import Projects from '../components/Projects'
+import Technologies from '../components/Technologies'
+import AboutMe from '../components/AboutMe'
 
 export default function Home() {
   return (
-    <div className="h-screen bg-[#0f1624]">
+    <div className="h-full">
       <Head>
         <title>Juan Zapata Gomez</title>
         <meta name="description" content="Full Stack Developer - Boston, MA. Experienced with ReactJS, NextJS, TailwindCSS." />
@@ -28,18 +31,34 @@ export default function Home() {
         </div>
       </div>
 
+      {/* Divider */}
       <div className="mt-10 px-5 w-full max-w-7xl mx-auto">
         <Divider />
       </div>
 
-      {/* Projects */}
 
+      {/* Projects */}
+      <div className="mt-14 px-5 w-full max-w-7xl mx-auto">
+        <Projects />
+      </div>
+
+      <div className="mt-14 px-5 w-full max-w-7xl mx-auto">
+        <Divider />
+      </div>
       
       {/* Technologies */}
+      <div className="mt-12 px-5 w-full max-w-7xl mx-auto">
+        <Technologies />
+      </div>
 
+      <div className="md:mt-14 mt-20 px-5 w-full max-w-7xl mx-auto">
+        <Divider />
+      </div>
 
       {/* About Me */}
-
+      <div className="mt-12 px-5 w-full max-w-7xl mx-auto">
+        <AboutMe />
+      </div>
 
       {/* Footer */}
     </div>
