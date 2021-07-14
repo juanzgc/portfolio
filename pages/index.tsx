@@ -6,6 +6,7 @@ import Divider from '../components/Divider'
 import Projects from '../components/Projects'
 import Technologies from '../components/Technologies'
 import AboutMe from '../components/AboutMe'
+import Link from 'next/link'
 
 export default function Home() {
   return (
@@ -24,7 +25,9 @@ export default function Home() {
         <div className="col-start-1 col-span-2 self-center">
           <h1 className="font-medium text-4xl font-mono bg-gradient-to-r from-gray-100 to-gray-600 text-transparent bg-clip-text">Juan Zapata Gomez</h1>
           <h2 className="text-gray-400 font-mono text-lg mt-6 max-w-lg">Welcome to my personal portfolio. I&apos;m a Back End Developer in the day and a Full Stack Web Developer at night.</h2>
-          <button className="bg-gradient-to-r from-[#13adc7] to-[#935dd6] px-14 py-3 focus:outline-none mt-10 text-gray-300 text-2xl font-medium rounded-full transition duration-150 transform hover:scale-110">Learn More</button>
+          <Link href="#projects" passHref>
+            <a><button className="bg-gradient-to-r from-[#13adc7] to-[#935dd6] px-14 py-3 focus:outline-none mt-10 text-gray-300 text-2xl font-medium rounded-full transition duration-150 transform hover:scale-110">Learn More</button></a>
+          </Link>
         </div>
         <div className="hidden md:grid">
           <Animation />
@@ -32,7 +35,7 @@ export default function Home() {
       </div>
 
       {/* Divider */}
-      <div className="mt-10 px-5 w-full max-w-7xl mx-auto">
+      <div id="projects" className="mt-10 px-5 w-full max-w-7xl mx-auto">
         <Divider />
       </div>
 
@@ -42,7 +45,7 @@ export default function Home() {
         <Projects />
       </div>
 
-      <div className="mt-14 px-5 w-full max-w-7xl mx-auto">
+      <div id="technologies" className="mt-14 px-5 w-full max-w-7xl mx-auto">
         <Divider />
       </div>
       
@@ -51,7 +54,7 @@ export default function Home() {
         <Technologies />
       </div>
 
-      <div className="md:mt-14 mt-20 px-5 w-full max-w-7xl mx-auto">
+      <div id="about" className="md:mt-14 mt-20 px-5 w-full max-w-7xl mx-auto">
         <Divider />
       </div>
 
