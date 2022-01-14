@@ -26,7 +26,7 @@ export default function Home() {
           <h1 className="font-medium text-4xl font-mono bg-gradient-to-r from-gray-100 to-gray-600 text-transparent bg-clip-text">Juan Zapata Gomez</h1>
           <h2 className="text-gray-400 font-mono text-lg mt-6 max-w-lg">Welcome to my personal portfolio. I&apos;m a developer at IBM Watson Assistant by day and a Full Stack Web Developer at night.</h2>
           <Link href="#projects" passHref>
-            <a><button className="bg-gradient-to-r from-[#13adc7] to-[#935dd6] px-14 py-3 focus:outline-none mt-10 text-gray-300 text-2xl font-medium rounded-full transition duration-150 transform hover:scale-110">Learn More</button></a>
+            <a><button className="bg-gradient-to-r from-[#13adc7] to-[#935dd6] px-14 py-3 focus:outline-none mt-10 text-gray-200 text-2xl font-medium rounded-full transition duration-150 transform hover:scale-110">Learn More</button></a>
           </Link>
         </div>
         <div className="hidden md:grid">

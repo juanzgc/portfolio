@@ -37,3 +37,6 @@ yarn-error.log*
 
 # Virtual Studio Code
 .vscode
+
+# Contentlayer
+.contentlayer

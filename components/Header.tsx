@@ -39,6 +39,7 @@ function Header() {
           <NavItem href="/#projects" name="Projects" />
           <NavItem href="/#technologies" name="Technologies" />
           <NavItem href="/#about" name="About" />
+          <NavItem href="/blog" name="Blog" />
         </div>
 
         <div className="flex items-center space-x-4">
@@ -46,7 +47,6 @@ function Header() {
           <LinkedInLink />
         </div>
       </div>
-
 
       {/* Dropdown Menu - show/hide based on menu state */}
       {
@@ -63,11 +63,13 @@ function Header() {
               <Link href="#about">
                 <a className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium" aria-current="page">About</a>
               </Link>
+              <Link href="/blog">
+                <a className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium" aria-current="page">Blog</a>
+              </Link>
             </div>
           </div>
         )
       }
-
 
     </nav>
   )
@@ -104,7 +106,7 @@ function LinkedInLink() {
 
 function NavItem({name, href, current}: {name: string, href: string, current?: boolean}) {
   return (
-    <Link href={href} passHref>
+    <Link href={href}>
       <a className={`cursor-pointer text-gray-300 px-3 py-2 rounded-md text-md font-medium ${current ? `bg-gray-800 text-white` : 'hover:text-white hover:bg-gray-700'}`}>
         {name}
       </a>
