@@ -28,7 +28,7 @@ function Blog({
     <NextSeo
       {...SEO}
       title='Blog - Juan Zapata Gomez'
-      description={`Web Development blog made for Full Stack Developers. Features discussions on 
+      description={`Web Development blog made for Full Stack Developers. Features tutorials on 
       ReactJS, NextJS, TailwindCSS, PostgreSQL, Supabase, Prisma, Strapi, Saleor, AI in WebDev, and more!`}
     />
     <div className='h-full'>
