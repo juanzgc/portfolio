@@ -4,6 +4,8 @@ import { ArticleJsonLd } from 'next-seo';
 import Header from '../components/Header'
 import { ArrowLeftIcon } from '@heroicons/react/solid'
 import Link from 'next/link';
+import SEO from 'next-seo.config';
+import {NextSeo} from 'next-seo'
 
 import type { PropsWithChildren } from 'react';
 import type { Blog } from '.contentlayer/types';
@@ -12,19 +14,46 @@ export default function BlogLayout({
   children,
   post
 }: PropsWithChildren<{ post: Blog }>) {
-  const allAuthors = post.authors.map(elem => elem.author);
   return (
     <>
       <ArticleJsonLd
-        url={`https://juanzg.com/blog/${post.slug}`}
+        url={`https://www.juanzg.com/blog/${post.slug}`}
         title={post.title}
-        images={[post.image]}
+        images={[`https://www.juanzg.com${post.image}`]}
         datePublished={new Date(post.publishedAt).toISOString()}
         dateModified={new Date(post.publishedAt).toISOString()}
-        authorName={allAuthors}
+        authorName={['Juan Zapata Gomez']}
         publisherName="Juan Zapata Gomez's Blog"
         description={post.summary}
         publisherLogo='https://ndesfgzqzbtptpoebdwc.supabase.in/storage/v1/object/public/main/Headshot.jpg'
+      />
+
+      <NextSeo
+        {...SEO}
+        title={post.title}
+        description={post.summary}
+        openGraph={{
+          title: post.title,
+          description: post.summary,
+          url: `https://www.juanzg.com/blog/${post.slug}`,
+          locale: 'en_IE',
+          site_name: 'Juan Zapata Gomez',
+          type: 'article',
+          article: {
+            publishedTime: new Date(post.publishedAt).toISOString(),
+            modifiedTime: new Date(post.publishedAt).toISOString(),
+            authors: ['Juan Zapata Gomez'],
+            section: 'Web Development'
+          },
+          images: [
+            {
+              url: `https://www.juanzg.com${post.image}`,
+              width: post.imageWidth,
+              height: post.imageHeight,
+              alt: post.title
+            }
+          ]
+        }}
       />
 
       <div className="h-full">

@@ -4,7 +4,7 @@ export default {
   openGraph: {
     type: 'website',
     locale: 'en_IE',
-    url: 'https://juanzg.com',
+    url: 'https://www.juanzg.com',
     site_name: 'Juan Zapata Gomez',
     profile: {
       firstName: 'Juan',

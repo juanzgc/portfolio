@@ -50,6 +50,8 @@ const Blog = defineDocumentType(() => ({
     publishedAt: { type: 'string', required: true },
     summary: { type: 'string', required: true },
     image: { type: 'string', required: true },
+    imageWidth: { type: 'number', required: true },
+    imageHeight: { type: 'number', required: true },
     authors: { type: 'list', of: Authors, required: true }
   },
   computedFields
