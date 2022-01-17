@@ -39,7 +39,7 @@ function Header() {
           <NavItem href="/#projects" name="Projects" />
           <NavItem href="/#technologies" name="Technologies" />
           <NavItem href="/#about" name="About" />
-          {/* <NavItem href="/blog" name="Blog" /> */}
+          <NavItem href="/blog" name="Blog" />
         </div>
 
         <div className="flex items-center space-x-4">
